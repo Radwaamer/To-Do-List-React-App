@@ -1,13 +1,107 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+body{
+    background: #A770EF;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #FDB99B, #CF8BF3, #A770EF);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #FDB99B, #CF8BF3, #A770EF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+section{
+    /* margin-right: auto;
+    margin-left: auto; */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 35rem;
+}
+
+svg{
+    color: white;
+    cursor: pointer;
+}
+
+.title{
+    text-align: center;
+}
+.title h1 span{
+    color: rgb(158, 13, 13);
+}
+
+.form{
+    padding: 1rem;
+    background-color: #333;
+    color: white;
+    border-radius: 0.5rem;
+}
+.form .todo-input{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    position: relative;
+}
+.form .todo-input form{
+    flex: 1;
+}
+.form .todo-input form input{
+    background-color: transparent;
+    padding: 0.7rem;
+    border-radius: 3px 0px 0px 3px;
+    width: 95%;
+    border: none;
+    background-color: #605a5a80;
+    outline: none;
+    caret-color: white;
+    color: white;
+
+}
+.form .todo-input form button{
+    background-color: rgb(158, 13, 13);
+    border-radius: 0px 3px 3px 0px;
+    padding: 0.7rem 1.2rem;
+    position: absolute;
+    border: none;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: white;
+}
+
+.tasks{
+    margin-top: 1.3rem;
+}
+.tasks .task{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.tasks .task.done >svg{
+    color: green;
+}
+.tasks .task:hover p{
+    background-color: #605a5a80;
+}
+.tasks .task p{
+    flex: 1;
+    padding: 1rem;
+    border-radius: 3px;
+    margin: 0;
+}
+.tasks .task.done p{
+    text-decoration: line-through;
+    color: #777;
+}
+.tasks .task .icons{
+    display: none;
+    align-items: center;
+    gap: 0.5rem;
+    transition: 0.3s;
+}
+.tasks .task:hover .icons{
+    display: flex;
+}
+.tasks .task .icons svg:first-child{
+    color: rgb(202, 202, 14);
+}
+.tasks .task .icons svg:last-child{
+    color: rgb(184, 31, 14);
 }
