@@ -33,6 +33,18 @@ const Todo = () => {
     })
   }
 
+  let currentData=[...data];
+  const toggleTasks = (mode)=>{
+    if(mode){
+      setData(data.filter(dt=>{
+      return !dt.done
+    }))
+    }
+    else{
+      setData(currentData)
+    }
+  }
+
   return (
     <section>
       <div className="container">
@@ -41,7 +53,8 @@ const Todo = () => {
         data={data}
         toggleCheck={toggleCheck}
         addTasks={addTasks}
-        deleteTasks={deleteTasks}/>
+        deleteTasks={deleteTasks}
+        toggleTasks={toggleTasks}/>
       </div>
     </section>
   )
