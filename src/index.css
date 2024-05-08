@@ -57,6 +57,9 @@ svg{
     gap: 1rem;
     position: relative;
 }
+.form .todo-input svg.active{
+    color: rgb(158, 13, 13);
+}
 .form .todo-input form{
     flex: 1;
 }
@@ -70,7 +73,6 @@ svg{
     outline: none;
     caret-color: white;
     color: white;
-
 }
 .form .todo-input form button{
     background-color: rgb(158, 13, 13);

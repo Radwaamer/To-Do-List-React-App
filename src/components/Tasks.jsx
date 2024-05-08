@@ -11,7 +11,9 @@ const Tasks = (props) => {
         <hr />
         <Task task={task} 
         toggleCheck={props.toggleCheck}
-        deleteTasks={props.deleteTasks}/>
+        deleteTasks={props.deleteTasks}
+        editTasks={props.editTasks}
+        mode={props.mode}/>
         </div>
       })}
     </div>
